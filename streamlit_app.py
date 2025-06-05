@@ -134,5 +134,5 @@ st.code(
 "peers = parse_file('log.txt','2024-01-01 00:00:00','2024-01-02 00:00:00','host80')\n"
 "print(peers)", language="python")
 st.markdown(
-f"<a class='btn' href='https://https://github.com/Inassee/Clarity_AI_Parser_Ex' target='_blank'>GitHub repo</a>",
+f"<a class='btn' href='https://github.com/Inassee/Clarity_AI_Parser_Ex' target='_blank'>GitHub repo</a>",
 unsafe_allow_html=True)
