@@ -49,8 +49,7 @@ st.markdown(f"""
  <p style="opacity:.8;max-width:620px;margin:auto">
   Upload a connection log, choose a window, get instant insights.</p><br>
  <span style="font-size:.9rem;opacity:.72;display:inline-flex;align-items:center;gap:6px">
-   Created by <b>Inasse Tyouss</b> for
-   <img src="logo.png" style="height:24px;border-radius:4px"> <b>Clarity AI</b>
+   Created by <b>Inasse Tyouss</b> for <b>Clarity AI</b>
  </span><br><br>
  <a href="#demo">Get started</a>
 </div>
@@ -135,5 +134,5 @@ st.code(
 "peers = parse_file('log.txt','2024-01-01 00:00:00','2024-01-02 00:00:00','host80')\n"
 "print(peers)", language="python")
 st.markdown(
-f"<a class='btn' href='https://github.com/your_org/clarity-parser' target='_blank'>GitHub repo</a>",
+f"<a class='btn' href='https://https://github.com/Inassee/Clarity_AI_Parser_Ex' target='_blank'>GitHub repo</a>",
 unsafe_allow_html=True)

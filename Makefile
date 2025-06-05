@@ -1,15 +1,11 @@
-# Install dependencies
 install:
-	pip install -r requirements.txt
+	pip install -e .
 
-# Run part1 (static) parser
-run-part1:
-	python log_parser_all_in_one.py Optional-connections.log "2024-01-01 00:00:00" "2024-02-01 00:00:00" host80
-
-# Run part2 (streaming) parser with default 1-hour window
-run-part2:
-	python streaming_parser.py Optional-connections.log host80
-
-# Unit tests
 test:
 	pytest -q
+
+run-part1:
+	python -m clarity_parser.static_parser Optional-connections.log "2024-01-01 00:00:00" "2024-02-01 00:00:00" host80
+
+run-part2:
+	python -m clarity_parser.streaming_parser Optional-connections.log host80

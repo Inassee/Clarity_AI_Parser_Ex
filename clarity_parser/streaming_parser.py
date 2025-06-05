@@ -1,4 +1,3 @@
-# clarity_parser/streaming_parser.py
 import sys, time, argparse
 from collections import deque, Counter
 from pathlib import Path
@@ -26,7 +25,6 @@ def main() -> None:
     last_pos = 0
     latest_ts_seen = 0
 
-    # schedule the first report at the next top-of-hour
     def next_full_hour(ts: int) -> int:
         return (ts // 3600 + 1) * 3600
 
@@ -37,7 +35,6 @@ def main() -> None:
 
     with path.open("r", encoding="utf-8") as fh:
         while True:
-            # ───── read new lines
             fh.seek(last_pos)
             for line in fh:
                 rec = parse_line(line)
@@ -46,15 +43,12 @@ def main() -> None:
                     latest_ts_seen = max(latest_ts_seen, rec[0])
             last_pos = fh.tell()
 
-            # ───── choose logical clock
             real_now = int(time.time())
-            # if file is stale (>1 min gap) freeze now at latest line
             if real_now - latest_ts_seen > 60:
                 logical_now = latest_ts_seen
             else:
                 logical_now = real_now
 
-            # ───── trim buffer
             cutoff = logical_now - args.window
             while buf and buf[0][0] < cutoff:
                 buf.popleft()
