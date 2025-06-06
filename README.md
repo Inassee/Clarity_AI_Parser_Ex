@@ -48,3 +48,5 @@ requirements.txt            → dependencies
 ---
 
 <sub>Created by <strong>Inasse Tyouss</strong> for <strong>Clarity AI</strong></sub>
+
+<small>Note : a few autocomplete suggestions (HTML/CSS in `streamlit_app.py and refactoring suggestion`) were generated with GitHub Copilot; design and final implementation decisions are my own.</small>
