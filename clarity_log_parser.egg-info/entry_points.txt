@@ -1,2 +1,0 @@
-[console_scripts]
-log-parse = clarity_parser.log_parser_all_in_one:parse_logs

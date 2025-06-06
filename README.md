@@ -51,4 +51,4 @@ requirements.txt            → dependencies
 
 ---
 
-<sub>Note : a few autocomplete suggestions (HTML/CSS in `streamlit_app.py and refactoring suggestion`) were generated with GitHub Copilot; design and final implementation decisions are my own.</sub>
+<sub>Note : a few autocomplete suggestions (HTML/CSS in `streamlit_app.py` and refactoring hints) were generated with GitHub Copilot; design and final implementation decisions are my own.</sub>
